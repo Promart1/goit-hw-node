@@ -21,7 +21,7 @@ app.use((req, res) => {
 app.use((err, req, res, next) => {
   const { message = "Server error" } = err;
 
-  res.status(500).json({ message: err.message });
+  res.status(err.status || 500).json({ message: err.message });
 });
 
 module.exports = app;
