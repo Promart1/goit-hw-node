@@ -1,6 +1,6 @@
 const { HttpError } = require("../helpers");
 const ctrlWrapper = require("../middlewares/ctrlWrapper");
-const Contact = require("../models/contact");
+const { Contact } = require("../models/contact");
 const contactSchema = require("../schemas/contact");
 
 const listContacts = async (req, res) => {
