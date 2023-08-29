@@ -3,6 +3,7 @@ const checkBody = require("./checkBody");
 const ctrlWrapper = require("./ctrlWrapper");
 const isValidId = require("./isValidId");
 const validateBody = require("./validateBody");
+const upload = require("./upload");
 
 module.exports = {
   authenticate,
@@ -10,4 +11,5 @@ module.exports = {
   ctrlWrapper,
   isValidId,
   validateBody,
+  upload,
 };
