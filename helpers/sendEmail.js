@@ -15,23 +15,21 @@ const config = {
 };
 
 const transporter = nodemailer.createTransport(config);
-const emailOptions = {
-  from: "marta.prokopiv@meta.ua",
-  to: "marta.batih@gmail.com",
-  subject: "Nodemailer test",
-  text: "Привіт. Ми тестуємо надсилання листів!",
-};
+// const emailOptions = {
+//   from: "marta.prokopiv@meta.ua",
+//   to: "marta.batih@gmail.com",
+//   subject: "Nodemailer test",
+//   text: "Привіт. Ми тестуємо надсилання листів!",
+// };
 
 const sendEmail = async (data) => {
-    const email = {
-      ...data,
-      from: "marta.prokopiv@meta.ua",
-      subject: "Nodemailer test",
-      text: "Привіт. Ми тестуємо надсилання листів!",
-    };
-    await transporter.sendMail(email);
-    return true
-}
+  const email = {
+    ...data,
+    from: "marta.prokopiv@meta.ua",
+  };
+  await transporter.sendMail(email);
+  return true;
+};
 
 // transporter
 //   .sendMail(emailOptions)
